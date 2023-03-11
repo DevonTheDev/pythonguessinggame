@@ -43,7 +43,8 @@ def Welcome():
 
     user_input = int(input("Choose an option here: "))
 
-    table[2] = int(round((int(table[0])/int(table[1])) * 100, 0)) # Updates the win percentage between games so stats menu is correct
+    if (table[0] > 0):
+        table[2] = int(round((int(table[0])/int(table[1])) * 100, 0)) # Updates the win percentage between games so stats menu is correct
 
     if(user_input == 1):
         table[1] += 1 # Updates the attempts counter
